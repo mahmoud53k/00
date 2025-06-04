@@ -144,9 +144,8 @@
             `).join('')}
           </table>
         `;
-
-        // إرسال البيانات إلى Google Sheets
-        fetch('https://script.google.com/macros/s/AKfycbxOxnh24T7QgiMOaS4_zw8QolLyL7Z1goT5mY2UKr8lC1Uv50bxmWqu37o9pE6TMOj6fQ/exec', {
+        
+        fetch('https://script.google.com/macros/s/AKfycbxvDcYxuKGX6qAHhntudxuwUMoawypE5THWU88sqj9LD4VCV41TZmXxZOX55MjPumHO/exec', {
           method: 'POST',
           body: JSON.stringify({
             name: nameInput,
@@ -158,7 +157,7 @@
           }
         });
 
-        // حذف الكود القديم من البيانات واستبداله بالجديد
+  
         patientData[newCode] = { ...patient };
         delete patientData[codeInput];
       } else {
